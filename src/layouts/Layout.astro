@@ -1,0 +1,50 @@
+---
+import { GoogleFontsOptimizer } from 'astro-google-fonts-optimizer';
+
+import IntroHeader from 'src/components/IntroHeader.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Instagram from '../components/Instagram.astro';
+
+
+import '../styles/sass/main.scss';
+import { SITE } from 'src/config';
+
+export interface Props {
+  title: string;
+  intro?: boolean;
+}
+
+const { title, intro } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="generator" content={Astro.generator} />
+    <GoogleFontsOptimizer
+      url="https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900&display=swap"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="is-preload">
+    <main>
+      <!-- Wrapper -->
+      <div id="wrapper" class="fade-in">
+        <IntroHeader intro={intro} />
+        <Navigation />
+        <slot />
+        <Footer />
+        <Instagram 
+  backgroundImage="../../public/images/Barda.png"
+  caption="Comparte con nosotros todas tus fotografías del evento, usando el siguiente #hashtag en todas tus publicaciones de Instagram."
+  hashtag="#Bodaroxul"
+/>
+        <div id="copyright">
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

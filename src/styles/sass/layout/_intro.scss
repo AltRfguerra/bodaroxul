@@ -1,0 +1,224 @@
+///
+/// Massively by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Intro */
+#intro {
+  @font-face {
+    font-family: 'The Queen';
+    src: url(./../../../../public/webfonts/the_queen/TheQueen-Regular.ttf);
+  }
+  @font-face {
+    font-family: 'Bourton';
+    src: url(./../../../../public/webfonts/Bourton-Font/Bourton/BourtonBase.ttf);
+  }
+  @font-face {
+    font-family: 'Juliette';
+    src: url(./../../../../public/webfonts/julietta_messie/Julietta-Messie.otf);
+  }
+
+  @include color-typography(invert);
+  @include color-button(invert);
+  @include padding(_size(padding) * 4, _size(padding) * 2);
+  @include vendor('align-items', 'center');
+  @include vendor('display', 'flex');
+  @include vendor('flex-direction', 'column');
+  @include vendor('justify-content', 'flex-end');
+  @include vendor('transition', (
+    'opacity 1s ease',
+    'transform 1s ease'
+  ));
+  position: relative;
+  cursor: default;
+  text-align: center;
+  z-index: 0.5;
+  min-height: 100vh;
+  background-image: url(./../../../../public/images/Portada.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 1000px;
+  background-attachment: fixed;
+  background-size: cover;
+
+  h1 {
+    font-family: 'Bourton';
+    font-size: 2.00rem;
+    line-height: 0.0;
+    font-weight: bold;
+    color: #555;
+    text-transform: none;
+    text-align: left;
+
+  }
+  h2 {
+    font-family: 'Juliette';
+    font-size: 3rem;
+    line-height: 2.0;
+    font-style: inherit;
+    font-stretch: extra-expanded;
+    color: #555;
+    margin-top: -40px;
+  }
+  h3 {
+    font-family: 'The Queen';
+    font-size: 1.00rem;
+    line-height: 1.0;
+    font-weight: lighter;
+    color: #555;
+    text-transform: none;
+  }
+  h4 {
+  font-family: 'The Queen';
+  font-size: 1rem;
+  line-height: 0.0;
+  font-weight: lighter;
+  color: #555;
+  text-transform: none;
+  text-align: right;
+  }
+  p {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-top: -0.25rem;
+    text-align: center;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+  }
+
+  & + #header {
+    margin-top: -35rem;
+
+    .logo {
+      @include vendor('transform', 'translateY(2rem)');
+      opacity: 1;
+      visibility: hidden;
+    }
+  }
+
+  &.hidden {
+    @include vendor('pointer-events', 'none');
+    @include vendor('transform', 'translateY(2rem)');
+    @include vendor('transition', (
+      'opacity 0.5s ease',
+      'transform 0.5s ease',
+      'visibility 0.5s'
+    ));
+    opacity: 0;
+    visibility: hidden;
+
+    & + #header {
+      .logo {
+        @include vendor('transform', 'translateY(0)');
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  body.is-preload & {
+    @include vendor('transform', 'translateY(2rem)');
+    opacity: 0;
+    &:not(.hidden) {
+      & + #header + #nav {
+        @include vendor('transform', 'translateY(4rem)');
+        opacity: 0;
+      }
+    }
+  }
+
+  @include breakpoint('<=medium') {
+    @include padding(_size(padding) * 2, _size(padding) * 2);
+    min-height: 90vh;
+
+    p {
+      br {
+        display: none;
+      }
+    }
+
+    & + #header {
+      margin-top: -10rem;
+    }
+  }
+
+  @include breakpoint('<=small') {
+    @include padding(_size(padding) * 1.5, _size(padding) * 1);
+    min-height: 80vh;
+
+    h1 {
+      font-size: 3.25rem;
+      line-height: 1.1;
+      margin-bottom: _size(element-margin) * 0.5;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-top: 0rem;
+    }
+
+    .actions {
+      display: none;
+    }
+  }
+}
+
+/* Countdown styles */
+#countdown-container {
+  text-align: center;
+  padding: 5px;
+  margin-top: 0rem;
+  position: relative;
+  z-index: 2;
+}
+
+.countdown-container h1 {
+  font-size: 2em;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  margin: 0 10px;
+  text-align: center
+  border-radius 10px;
+  padding: 10px;
+}
+
+.time span {
+  display: block;
+  color: white;
+}
+
+#days, #hours, #minutes, #seconds {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
+.label {
+  font-size: 0.8em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
+.separator {
+  font-size: 2.5em;
+  color: white;
+}

@@ -1,0 +1,97 @@
+/* styles.scss */
+
+/* Fuente personalizada */
+
+body {
+    background-color: #938C83;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.gallery-title {
+    font-size: 3rem;
+    color: #6c6c6c;
+    margin-bottom: 20px;
+}
+
+.gallery-wrapper {
+  position: relative;
+  max-width: 1080px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Evita que las imágenes se salgan del contenedor */
+}
+
+.gallery {
+    display: flex;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 5px solid #6c6c6c;
+  transition: opacity 0.5s ease-in-out; /* Transición suave entre imágenes */
+}
+
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: black;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.prev {
+  left: 5px;
+}
+
+.next {
+  right: 5px;
+}
+
+.image-description {
+  display: block; // Asegúrate de que esté visible para ver los cambios
+  font-size: 1em;
+  color: #000;
+  position: relative;
+  
+  // Ampliar el padding
+  padding: 30px; // Incrementa según necesites más espacio
+  padding-left: -80px; // Espacio adicional a la izquierda si es necesario
+
+  // Agregar margen para separar de otros elementos si es necesario
+  margin: 20px;
+
+  // Ajustar dimensiones si es necesario
+  width: 80%; // O el porcentaje/medida que necesites
+  height: auto; // Altura automática según el contenido, ajusta si es necesario
+}
+
+
+.image-description.active {
+  display: block; // Muestra solo la descripción activa
+}
+
+
+
+
+
+
+

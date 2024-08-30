@@ -1,0 +1,15 @@
+---
+export interface Props {
+  backgroundImage: string;
+  caption: string;
+  hashtag: string;
+}
+
+const { backgroundImage, caption, hashtag } = Astro.props;
+---
+<section class="instagram-section" style={`background-image: url('${backgroundImage}');`}>
+  <div class="overlay">
+    <p class="caption">{caption}</p>
+    <h2 class="hashtag">{hashtag}</h2>
+  </div>
+</section>

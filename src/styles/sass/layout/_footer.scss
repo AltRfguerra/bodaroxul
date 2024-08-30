@@ -1,0 +1,305 @@
+///
+/// Massively by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+#footer {
+  @include vendor('display', 'flex');
+  background-color: #938C83;
+  color: #3B322B;
+  cursor: default;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: _size(wrapper);
+  z-index: 2;
+  flex-direction: column;
+
+  > section {
+    @include vendor('flex-basis', '100%');
+    @include vendor('flex-grow', '2');
+    @include vendor('flex-shrink', '2');
+    @include padding((_size(padding) * 1), (_size(padding) * 1));
+    border-left: solid 2px _palette(alt, border);
+    color: #3B322B;
+    margin-bottom: 10px;
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &.split {
+      @include vendor('display', 'flex');
+      @include vendor('flex-direction', 'row');
+      padding: 0;
+      justify-content: space-between;
+
+      > section {
+        @include padding((_size(padding) * 2) - 1, (_size(padding) * 2));
+        border-top: solid 1px _palette(alt, border);
+        color: #3B322B;
+        margin-bottom: 0; /* Eliminar el margen inferior adicional */
+
+        &:first-child {
+          @include padding((_size(padding) * 2) - 1, (_size(padding) * 2), (_size(padding), 0, 0, 0));
+          border-top: 0;
+        }
+
+        &:last-child {
+          @include padding((_size(padding) * 2) - 1, (_size(padding) * 2), (0, 0, _size(padding), 0));
+          margin-bottom: -180px; /* Ajustar el margen inferior usando un valor negativo */
+        }
+      }
+    }
+  }
+
+  form label,
+  h3 {
+    font-size: 0.8rem;
+    color: #3B322B;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #3B322B;
+  }
+
+  @include breakpoint('<=medium') {
+    display: block;
+
+    > section {
+      border-top: solid 2px _palette(alt, border);
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      &.split {
+        > section {
+          @include padding((_size(padding) * 2), (_size(padding) * 2));
+          color: #3B322B;
+
+          &:first-child {
+            @include padding((_size(padding) * 2), (_size(padding) * 2));
+          }
+
+          &:last-child {
+            @include padding((_size(padding) * 2), (_size(padding) * 2));
+          }
+        }
+
+        &.contact {
+          > section {
+            padding: (_size(padding) * 2);
+            color: #3B322B;
+
+            &:first-child {
+              padding: (_size(padding) * 2);
+            }
+
+            &:last-child {
+              padding: (_size(padding) * 2);
+            }
+          }
+        }
+      }
+    }
+
+    form label,
+    h3,
+    p {
+      font-size: 0.9rem;
+      color: #3B322B;
+    }
+  }
+
+  @include breakpoint('<=small') {
+    > section {
+      @include padding((_size(padding) * 1), (_size(padding) * 1));
+      color: #3B322B;
+
+      &.split {
+        > section {
+          @include padding((_size(padding) * 1), (_size(padding) * 1));
+          color: #3B322B;
+
+          &:first-child {
+            @include padding((_size(padding) * 1), (_size(padding) * 1));
+          }
+
+          &:last-child {
+            @include padding((_size(padding) * 1), (_size(padding) * 1));
+          }
+        }
+
+        &.contact {
+          > section {
+            padding: (_size(padding) * 1);
+            color: #3B322B;
+
+            &:first-child {
+              padding: (_size(padding) * 1);
+            }
+
+            &:last-child {
+              padding: (_size(padding) * 1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint('<=xsmall') {
+    width: 100%;
+  }
+}
+
+// Mesa de Regalos Styles
+.mesa-de-regalos {
+  text-align: center;
+  padding: 20px;
+  border-top: solid 1px _palette(alt, border); /* Añadir línea divisoria arriba */
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #3B322B;
+  }
+
+  .mesa-de-regalos-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .left-column,
+    .right-column {
+      flex-basis: 48%;
+      padding: 20px;
+    }
+
+    .right-column .icons-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right-column img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+#copyright {
+  @include color-typography(invert);
+  position: relative;
+  color: #3B322B;
+  cursor: default;
+  font-family: _font(family-heading);
+  font-size: 0.8rem;
+  font-weight: _font(weight-heading);
+  letter-spacing: 0.075em;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  margin: (_size(padding) * 2) auto (_size(padding) * 4) auto;
+  width: calc(100% - #{_size(padding) * 2});
+  max-width: _size(wrapper);
+  z-index: 2;
+
+  a {
+    color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    li {
+      border-left: solid 2px;
+      display: inline-block;
+      line-height: 1;
+      margin-left: 1rem;
+      padding-left: 1rem;
+      color: #3B322B;
+
+      &:first-child {
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  @include breakpoint('<=large') {
+    margin: (_size(padding) * 2) auto;
+  }
+
+  @include breakpoint('<=xsmall') {
+    ul {
+      li {
+        border-left: 0;
+        margin: 1rem 0 0 0;
+        padding-left: 0;
+        display: block;
+        color: #3B322B;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.instagram-section {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .overlay {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .caption {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .hashtag {
+    font-size: 2.5rem;
+    font-family: 'Great Vibes', cursive;
+    color: #fff;
+  }
+}
+
+// Añadir esta sección en el SCSS para controlar el tamaño de las imágenes
+#footer img {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+  margin: 10px auto;
+}
+
+@include breakpoint('<=small') {
+  #footer img {
+    width: 150px;
+    margin: 5px auto;
+  }
+}

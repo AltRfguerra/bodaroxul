@@ -1,0 +1,85 @@
+---
+import { CONTACT, SOCIAL_MEDIA_ITEMS } from 'src/config';
+const { featured, backgroundImage, caption, hashtag } = Astro.props;
+---
+
+<footer id="footer">
+  <section>
+    <section>
+      <h1>CONFIRMA TU ASISTENCIA</h1>
+    </section>
+    <form id="asistencia-form">
+      <div class="fields">
+        <div class="field">
+          <h3 for="Nombre">Nombre</h3>
+          <input type="text" name="Nombre" id="Nombre" required />
+        </div>
+        <div class="field">
+          <h3 for="Asistencia">Asistencia</h3>
+          <div id="attendance-options">
+            <div class="attendance-option">
+              <input type="radio" id="si-asistire" name="attendance" value="si" required>
+              <label for="si-asistire">Si Asistiré</label>
+            </div>
+            <div class="attendance-option">
+              <input type="radio" id="no-asistire" name="attendance" value="no" required>
+              <label for="no-asistire">No Asistiré</label>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <h3 for="Mensaje">Mensaje</h3>
+          <textarea name="Mensaje" id="Mensaje" rows="3"></textarea>
+        </div>
+      </div>
+      <ul class="actions">
+        <h3><input type="submit" value="Enviar" /></h3>
+      </ul>
+    </form>
+    <section>
+      <h3>TE AGRADECERÍAMOS SI PUDIERAS CONFIRMAR TU ASISTENCIA, <br/ > AL LLENAR TU INFORMACIÓN ME ENVIARAS TU CONFIRMACIÓN <br/ > <strong><u>TEN EN CUENTA QUE ES UN EVENTO SIN INFANTES</u></strong></h3>
+    </section>
+  </section>
+
+  <!-- Vincula el archivo JavaScript -->
+<script src="/src/scripts/sendPass.js" type="module"></script>
+
+  <!-- Mesa de Regalos Section -->
+  <section class="split contact mesa-de-regalos">
+    <section class="mesa-de-regalos-content">
+      <div class="left-column">
+        <h1>MESA DE REGALOS</h1>
+        <p>Nos emociona que nos puedas acompañar a nuestro gran día, ya que es muy importante para nosotros, y si deseas otorgarnos un obsequio, estas son las opciones que les sugerimos, gracias. :)</p>
+      </div>
+      <div class="right-column">
+        <p><strong>Haz click en el logo</strong></p>
+        <ul class="icons-list">
+          <li>
+            <a href="https://sites.google.com/view/tarjetabbvabodaroxul/inicio" target="_blank">
+              <img src="../../public/images/VerdeBBVA.png" alt="Tarjeta BBVA" />
+            </a>
+          </li>
+          <li>
+            <a href={CONTACT.phone} target="_blank">
+              <img src="../../public/images/Verdeliverpool.png" alt="Liverpool" />
+            </a>
+          </li>
+          <li>
+            <a href={CONTACT.email} target="_blank">
+              <img src="../../public/images/Verde Amazon.png" alt="Amazon" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+  <!-- Sección de Instagram -->
+  <section class="instagram-section" style="background-image: url('${backgroundImage}'); width: 40%; margin-top: 20px;">
+    <div class="overlay">
+      <p class="caption">{caption}</p>
+      <h2 class="hashtag">{hashtag}</h2>
+    </div>
+  </section>
+</footer>
+

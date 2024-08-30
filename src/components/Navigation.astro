@@ -1,0 +1,54 @@
+---
+import { NAV_ITEMS, SOCIAL_MEDIA_ITEMS } from 'src/config';
+import { showAlert } from './../scripts/Showalert';
+if (typeof window !== 'undefined') {
+  window.showAlert = showAlert;
+}
+
+const { url } = Astro;
+const { pathname } = url;
+---
+
+<nav id="nav">
+  <ul class="links">
+    {
+      NAV_ITEMS.map((item) => 
+      {
+        return (
+          <li class={pathname === item.path ? 'active' : ''}>
+            <a href={item.path}>{item.title}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+  <div class= "date">
+    <k> Domingo 15 / Septiembre / 2024 </k>
+  </div>
+  <ul class="icons">
+    {
+      SOCIAL_MEDIA_ITEMS.map((item) => {
+        return (
+          <li>
+            <a href={item.path} class={`icon brands ${item.iconClass}"`}>
+              <span class="label">{item.title}</span>
+            </a>
+          </li>
+        );
+      })
+    }
+    <li>
+      <a href="https://open.spotify.com/playlist/1j60MYdJlilDb6qzKvcERz?si=7d35044156694b5e" target="_blank" class="icon brands fa-spotify"><span class="label">Spotify</span></a>
+    </li>
+    <li>
+      <a href="https://www.amazon.com.mx/wedding/registry/1TKPJTRUUW6UX" target="_blank" class="icon brands fa-amazon"><span class="label">Amazon</span></a>
+    </li>
+    <li>
+      <a href= "https://sites.google.com/view/tarjetabbvabodaroxul/inicio" target="_blank" class="fa fa-credit-card" onclick="showAlert('4152 3137 1005 6008');return false;"></a>
+    </li>
+    <li>
+      <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51468394" target="_blank" class="fa fa-gifts"><span class="label">L</span></a>
+    </li>
+  </ul>
+</nav>
+

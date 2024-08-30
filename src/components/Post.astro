@@ -1,0 +1,23 @@
+---
+export interface Props {
+  title: string;
+  summary: string;
+  featured?: boolean;
+  link: string;
+}
+
+const { title, summary, link, featured } = Astro.props;
+---
+
+<section class="post">
+  <header class="major">
+    <h1 set:html={title}></h1>
+    <p set:html={summary}></p>
+      <ul class="actions special">
+        <li>
+          <a href={link} class={featured ? 'button large' : 'button'} target="_blank">Ver Mapa</a>
+        </li>
+      </ul>
+  </header>
+</section>
+

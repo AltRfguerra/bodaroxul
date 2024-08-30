@@ -1,0 +1,239 @@
+///
+/// Massively by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Main */
+@font-face {
+  font-family: 'Julieta';
+  src: url(./../../../../public/webfonts/the_queen/TheQueen-Regular.ttf)
+}
+
+#main {
+  background-color: #BFBBB3;
+  position: relative;
+  margin: 0 auto;
+  width: calc(100% - #{_size(padding) * 2});
+  max-width: _size(wrapper);
+  z-index: 2;
+
+  > * {
+    @include padding((_size(padding) * 2), (_size(padding) * 2));
+    border-top: solid 2px _palette(border);
+    margin: 0;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  > footer {
+    text-align: center;
+  }
+
+  > .post {
+    @include padding((_size(padding) * 4), (_size(padding) * 4));
+
+    header {
+      &.major {
+        > .date {
+          margin-top: -7rem;
+        }
+
+        > h1, h2 {
+            font-family: 'Julieta';
+            font-size: 4.00rem;
+            line-height: 1.0;
+            font-weight: lighter;
+            color: #555;
+            text-transform: none;
+        }
+      }
+    }
+
+    &.featured {
+      text-align: center;
+    }
+
+    @include breakpoint('<=large') {
+      @include padding((_size(padding) * 3), (_size(padding) * 2));
+    }
+
+    @include breakpoint('<=small') {
+      @include padding((_size(padding) * 2), (_size(padding) * 1));
+
+      header {
+        &.major {
+          > .date {
+            margin-top: -1rem;
+            margin-bottom: _size(element-margin);
+          }
+
+          > h1, h2 {
+            font-family: 'Julieta';
+            font-size: 1.0rem;
+            line-height: .5;
+            margin: 0 0 (_size(element-margin) * 0.75) 0;
+            color: #555;
+            text-transform: none;
+          }
+        }
+      }
+    }
+  }
+
+  > .posts {
+    @include fixed-grid((
+      columns: 2,
+      gutters: (_size(padding) * 4),
+      horizontal-align: center,
+      vertical-align: flex-start,
+      flush: false
+    ));
+    width: 100%;
+    padding: 0;
+
+    > article {
+      border-color: _palette(border);
+      border-left-width: 2px;
+      border-style: solid;
+      border-top-width: 2px;
+      text-align: center;
+
+      > :last-child {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(2n - 1) {
+        border-left-width: 0;
+      }
+
+      &:nth-child(-n + 2) {
+        border-top-width: 0;
+      }
+      > h1, h2 {
+        font-family: 'Julieta';
+        font-size: 1.0rem;
+        line-height: 1.2;
+        margin: 0 0 (_size(element-margin) * 0.75) 0;
+      }
+    }
+
+    @include breakpoint('<=medium') {
+      @include fixed-grid-resize((
+        columns: 2,
+        gutters: (_size(padding) * 2.5),
+        flush: false
+      ));
+    }
+
+    @include breakpoint('<=small') {
+      @include fixed-grid-resize((
+        columns: 1,
+        gutters: (_size(padding) * 2),
+        prev-columns: 2,
+        flush: false
+      ));
+
+      > article {
+        &:nth-child(2n - 1) {
+          border-left-width: 2px;
+        }
+
+        &:nth-child(-n + 2) {
+          border-top-width: 2px;
+        }
+
+        &:nth-child(n) {
+          border-left-width: 0;
+        }
+
+        &:nth-child(-n + 1) {
+          border-top-width: 0;
+        }
+      }
+    }
+  }
+
+  @include breakpoint('<=small') {
+    > * {
+      @include padding((_size(padding) * 1), (_size(padding) * 1));
+    }
+  }
+
+  @include breakpoint('<=xsmall') {
+    width: 100%;
+  }
+}
+
+/* Add the image grid styles */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+
+
+  .vertical {
+    grid-row: 1 / 2;
+    width: 100%;
+    height: auto;
+  }
+
+  .horizontal {
+    width: 100%;
+    height: auto;
+  }
+
+  .vertical:nth-child(1) {
+    grid-column: 1 / 2;
+  }
+
+  .vertical:nth-child(2) {
+    grid-column: 2 / 3;
+  }
+
+  .horizontal:nth-child(3) {
+    grid-column: span 1;
+    grid-row: 2 / 3;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    .vertical {
+      grid-row: auto;
+      grid-column: auto;
+    }
+
+    .horizontal {
+      grid-column: auto;
+    }
+  }
+}
+
+/* Styles for the map button */
+.map-button {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.map-button a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007BFF;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.map-button a:hover {
+  background-color: #0056b3;
+}

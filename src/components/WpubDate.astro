@@ -1,0 +1,28 @@
+---
+import PostPreview from './PostPreview.astro';
+
+// Suponiendo que `posts` es una lista de publicaciones importadas o pasadas como prop
+const posts = Astro.props.posts || [];
+
+// Verifica los valores de pubDate
+posts.forEach(post => {
+  console.log(post.title, post.pubDate, new Date(post.pubDate));
+});
+
+// Ordenar los posts por pubDate
+posts.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+---
+
+<section class="posts">
+  {posts.map(post => (
+    <PostPreview 
+      title={post.title} 
+      summary={post.summary} 
+      image={post.image} 
+      alt={post.alt} 
+      contents={post.contents} 
+      date={new Date(post.pubDate)} // Proporcionar pubDate como date para la lógica interna
+      link={post.link}
+    />
+  ))}
+</section>

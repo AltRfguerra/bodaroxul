@@ -34,7 +34,7 @@ export const SOCIAL_MEDIA_ITEMS = [
 
 export const SITE = {
   title: 'Raúl + Rox',
-  url: 'https://astro-massively.darko.io',
+  url: 'https://www.google.com',
 };
 
 export const CONTACT = {

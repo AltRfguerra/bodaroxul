@@ -1,24 +1,21 @@
-import rss from '@astrojs/rss';
+import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 import { SITE } from '../config';
 
-interface Post {
-  url: string;
-  frontmatter: any;
-}
-
-export const get = () =>
-  rss({
+// Modifica la función de "get" a "GET" y ajusta la generación de items con `pagesGlobToRssItems`.
+export async function GET() {
+  const items = await pagesGlobToRssItems(import.meta.glob('./blog/**/*.md'));
+  
+  return rss({
     // `<title>` field in output xml
     title: SITE.title,
-    // `<description>` field in output xml
-    description: SITE.description,
+    // `<description>` field in output xml (asegúrate de que SITE.description esté definido en tu config)
+    description: SITE.description || 'Descripción predeterminada del feed RSS.',
     // base URL for RSS <item> links
-    // SITE will use "site" from your project's astro.config.
     site: SITE.url,
-    // list of `<item>`s in output xml
-    // simple example: generate items for every md file in /src/pages
-    // see "Generating items" section for required frontmatter and advanced use cases
-    items: import.meta.glob('./blog/**/*.md'),
+    // list of `<item>`s in output xml, generado por `pagesGlobToRssItems`
+    items,
     // (optional) inject custom xml
     customData: `<language>en-us</language>`,
   });
+}
+

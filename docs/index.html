@@ -1,8 +1,554 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="generator" content="Astro v3.6.5"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><style type="text/css">@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff4jvo.woff) format('woff');}@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf4jvo.woff) format('woff');}@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZWMf8.woff) format('woff');}@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZWMf8.woff) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdo.woff) format('woff');} /* cyrillic-ext */@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff1jvzRPA.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}/* cyrillic */@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff8jvzRPA.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* vietnamese */@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff3jvzRPA.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}/* latin-ext */@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff2jvzRPA.woff2) format('woff2');unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff4jvw.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}/* cyrillic-ext */@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf1jvzRPA.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}/* cyrillic */@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf8jvzRPA.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* vietnamese */@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf3jvzRPA.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}/* latin-ext */@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf2jvzRPA.woff2) format('woff2');unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {font-family: 'Merriweather';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf4jvw.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}/* cyrillic-ext */@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZVcf6lvg.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}/* cyrillic */@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZXMf6lvg.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* vietnamese */@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZV8f6lvg.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}/* latin-ext */@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZVsf6lvg.woff2) format('woff2');unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZWMf6.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}/* cyrillic-ext */@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZVcf6lvg.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}/* cyrillic */@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZXMf6lvg.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* vietnamese */@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZV8f6lvg.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}/* latin-ext */@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZVsf6lvg.woff2) format('woff2');unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {font-family: 'Merriweather';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZWMf6.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}/* cyrillic-ext */@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmhduz8A.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}/* cyrillic */@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwkxduz8A.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* greek-ext */@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmxduz8A.woff2) format('woff2');unicode-range: U+1F00-1FFF;}/* greek */@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlBduz8A.woff2) format('woff2');unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}/* vietnamese */@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmBduz8A.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}/* latin-ext */@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmRduz8A.woff2) format('woff2');unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdu.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style><title>Raúl + Rox</title> <link rel="stylesheet" href="/bodaroxul2/docs/styles/main.css"><script type="module" src="/_astro/hoisted.51666cae.js"></script></head> <body class="is-preload"> <main> <!-- Wrapper --> <div id="wrapper" class="fade-in"> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <div id="intro"><div style="height: 1100px;"></div><!-- Countdown Container --><div id="countdown-container"><div class="countdown"><div class="time"><n id="days">000</n><k class="label">Día(s)</k></div><div class="separator">:</div><div class="time"><n id="hours">00</n><k class="label">Hora(s)</k></div><div class="separator">:</div><div class="time"><n id="minutes">00</n><k class="label">Minuto(s)</k></div><div class="separator">:</div><div class="time"><n id="seconds">00</n><k class="label">Segundo(s)</k></div></div><div style="height: 220px;"></div></div><!--<li>
-            <a href="#header" class="button icon solid solo fa-arrow-down scrolly">
-              Continue
-            </a>
-            <div style="height: 100px;"></div>
-            <ul class="actions">
-            </ul>
-          </li>--></div><!-- Header --><header id="header"> <a href="/" class="logo">Raúl + Rox</a> </header> <nav id="nav"> <ul class="links"> <li class=""> <a href="/">Invitación</a> </li><li class=""> <a href="/generic">Boda</a> </li> </ul> <div class="date"> <k>Domingo 15 / Septiembre / 2024</k> </div> <ul class="icons"> <li> <a href="https://open.spotify.com/playlist/1j60MYdJlilDb6qzKvcERz?si=7d35044156694b5e" target="_blank" class="icon brands fa-spotify"><span class="label">Spotify</span></a> </li> <li> <a href="https://www.amazon.com.mx/wedding/registry/1TKPJTRUUW6UX" target="_blank" class="icon brands fa-amazon"><span class="label">Amazon</span></a> </li> <li> <a href="https://sites.google.com/view/tarjetabbvabodaroxul/inicio" target="_blank" class="fa fa-credit-card" onclick="showAlert('4152 3137 1005 6008');return false;"></a> </li> <li> <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51468394" target="_blank" class="fa fa-gifts"><span class="label">L</span></a> </li> </ul> </nav>  <div id="main"> <!-- Featured Post --> <article class="post featured"> <header class="major"> <span class="date" style="display: none;"> 2024-09-15 </span> <h2> <a>Nuestra Boda</a> </h2> <p>"Sabiendo que el amor es para compartir <br/ > cada uno pensando que el amor jamás morirá <br/ > mirando sus ojos y esperando que siempre este ahí". <br/ > Here, There & Everywere</p> </header> <a href="/blog/massive-headline" class="image-grid"> <img src="../../public/images/gif-1.gif" alt="Vertical Image 1" class="vertical"> <img src="../../public/images/1.png" alt="Horizontal Image 1" class="horizontal"> <img src="../../public/images/2.png" alt="Horizontal Image 2" class="horizontal"> <img src="../../public/images/gif-2.gif" alt="Vertical Image 2" class="vertical"> </a>  <br> <section> <h3> CON LA BENDICIÓN DE NUESTRA MADRE Y PADRE </h3> </section> <section> <h3>Rosa María Chavez Vargas <br> Cesar Armando De La O Gavaldón <br> & <br> Minerva Alicia Guerra Caraveo </h3> </section> <ul class="actions special"> <li> <a href="/Itinerario" class="button large" target="_blank">Itinerario y Padrinos </a> </li> </ul> </article> <!-- Posts --> <section class="posts"> <section class="post"> <header class="major"> <h1>CEREMONIA RELIGIOSA</h1> <p>Parroquia Espíritu Santo <br/ > Calle Miguel Schultz No. 3104 <br/ > La Cima Chihuahua, Chih <br/ > <strong> Domingo 15 de Septiembre del 2024 </strong> <br/ > <em> 18:00 hrs </em></p> <ul class="actions special"> <li> <a href="https://maps.app.goo.gl/AKNeX6mi5Awwm7vFA" class="button" target="_blank">Ver Mapa</a> </li> </ul> </header> </section><section class="post"> <header class="major"> <h1>RECEPCIÓN</h1> <p>Los Encinos Salón <br/ > Calle 38 y Av. Palestina No. 12900 <br/ > Tabalaopa, Chihuahua, Chih. <br/ > <strong> Domingo 15 de Septiembre del 2024 </strong> <br/ > <em> 21:00 hrs </em></p> <ul class="actions special"> <li> <a href="https://maps.app.goo.gl/iHpp8D22sacXa4xd9" class="button" target="_blank">Ver Mapa</a> </li> </ul> </header> </section> </section> </div>  <footer id="footer"> <section> <section> <h1>CONFIRMA TU ASISTENCIA</h1> </section> <form id="asistencia-form"> <div class="fields"> <div class="field"> <h3 for="Nombre">Nombre</h3> <input type="text" name="Nombre" id="Nombre" required> </div> <div class="field"> <h3 for="Asistencia">Asistencia</h3> <div id="attendance-options"> <div class="attendance-option"> <input type="radio" id="si-asistire" name="attendance" value="si" required> <label for="si-asistire">Si Asistiré</label> </div> <div class="attendance-option"> <input type="radio" id="no-asistire" name="attendance" value="no" required> <label for="no-asistire">No Asistiré</label> </div> </div> </div> <div class="field"> <h3 for="Mensaje">Mensaje</h3> <textarea name="Mensaje" id="Mensaje" rows="3"></textarea> </div> </div> <ul class="actions"> <h3><input type="submit" value="Enviar"></h3> </ul> </form> <section> <h3>TE AGRADECERÍAMOS SI PUDIERAS CONFIRMAR TU ASISTENCIA, <br> AL LLENAR TU INFORMACIÓN ME ENVIARAS TU CONFIRMACIÓN <br> <strong><u>TEN EN CUENTA QUE ES UN EVENTO SIN INFANTES</u></strong></h3> </section> </section> <!-- Vincula el archivo JavaScript --> <script src="/src/scripts/sendPass.js" type="module"></script> <!-- Mesa de Regalos Section --> <section class="split contact mesa-de-regalos"> <section class="mesa-de-regalos-content"> <div class="left-column"> <h1>MESA DE REGALOS</h1> <p>Nos emociona que nos puedas acompañar a nuestro gran día, ya que es muy importante para nosotros, y si deseas otorgarnos un obsequio, estas son las opciones que les sugerimos, gracias. :)</p> </div> <div class="right-column"> <p><strong>Haz click en el logo</strong></p> <ul class="icons-list"> <li> <a href="https://sites.google.com/view/tarjetabbvabodaroxul/inicio" target="_blank"> <img src="../../public/images/VerdeBBVA.png" alt="Tarjeta BBVA"> </a> </li> <li> <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51468394" target="_blank"> <img src="../../public/images/Verdeliverpool.png" alt="Liverpool"> </a> </li> <li> <a href="https://www.amazon.com.mx/wedding/registry/1TKPJTRUUW6UX" target="_blank"> <img src="../../public/images/Verde Amazon.png" alt="Amazon"> </a> </li> </ul> </div> </section> </section> <!-- Sección de Instagram --> <section class="instagram-section" style="background-image: url('${backgroundImage}'); width: 40%; margin-top: 20px;"> <div class="overlay"> <p class="caption"></p> <h2 class="hashtag"></h2> </div> </section> </footer> <section class="instagram-section" style="background-image: url('../../public/images/Barda.png');"> <div class="overlay"> <p class="caption">Comparte con nosotros todas tus fotografías del evento, usando el siguiente #hashtag en todas tus publicaciones de Instagram.</p> <h2 class="hashtag">#Bodaroxul</h2> </div> </section> <div id="copyright"></div> </div> </main> </body></html>
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="Astro v3.6.5">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  
+  <style type="text/css">
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff4jvo.woff) format('woff');
+    }
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf4jvo.woff) format('woff');
+    }
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZWMf8.woff) format('woff');
+    }
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZWMf8.woff) format('woff');
+    }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdo.woff) format('woff');
+    }
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff1jvzRPA.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+    /* cyrillic */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff8jvzRPA.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* vietnamese */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff3jvzRPA.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff2jvzRPA.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXff4jvw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf1jvzRPA.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+    /* cyrillic */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf8jvzRPA.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* vietnamese */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf3jvzRPA.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf2jvzRPA.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: italic;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wvf4jvw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZVcf6lvg.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+    /* cyrillic */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZXMf6lvg.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* vietnamese */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZV8f6lvg.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZVsf6lvg.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRZWMf6.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZVcf6lvg.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+    /* cyrillic */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZXMf6lvg.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* vietnamese */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZV8f6lvg.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZVsf6lvg.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNZWMf6.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmhduz8A.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+    /* cyrillic */
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwkxduz8A.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    /* greek-ext */
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmxduz8A.woff2) format('woff2');
+      unicode-range: U+1F00-1FFF;
+    }
+    /* greek */
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlBduz8A.woff2) format('woff2');
+      unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+    }
+    /* vietnamese */
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmBduz8A.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+    /* latin-ext */
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmRduz8A.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdu.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
+  
+  <title>Raúl + Rox</title> 
+  <link rel="stylesheet" href="/bodaroxul2/docs/styles/main.css">
+  <script type="module" src="/_astro/hoisted.51666cae.js"></script>
+</head> 
+
+<body class="is-preload"> 
+  <main> 
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in"> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+      
+      <div id="intro">
+        <div style="height: 1100px;"></div>
+        <!-- Countdown Container -->
+        <div id="countdown-container">
+          <div class="countdown">
+            <div class="time">
+              <n id="days">000</n>
+              <k class="label">Día(s)</k>
+            </div>
+            <div class="separator">:</div>
+            <div class="time">
+              <n id="hours">00</n>
+              <k class="label">Hora(s)</k>
+            </div>
+            <div class="separator">:</div>
+            <div class="time">
+              <n id="minutes">00</n>
+              <k class="label">Minuto(s)</k>
+            </div>
+            <div class="separator">:</div>
+            <div class="time">
+              <n id="seconds">00</n>
+              <k class="label">Segundo(s)</k>
+            </div>
+          </div>
+          <div style="height: 220px;"></div>
+        </div>
+      </div>
+      
+      <!-- Header -->
+      <header id="header"> 
+        <a href="/" class="logo">Raúl + Rox</a> 
+      </header> 
+      
+      <!-- Navigation -->
+      <nav id="nav"> 
+        <ul class="links"> 
+          <li class=""> <a href="/">Invitación</a> </li>
+          <li class=""> <a href="/generic">Boda</a> </li> 
+        </ul> 
+        <div class="date"> 
+          <k>Domingo 15 / Septiembre / 2024</k> 
+        </div> 
+        <ul class="icons"> 
+          <li> 
+            <a href="https://open.spotify.com/playlist/1j60MYdJlilDb6qzKvcERz?si=7d35044156694b5e" target="_blank" class="icon brands fa-spotify">
+              <span class="label">Spotify</span>
+            </a> 
+          </li> 
+          <li> 
+            <a href="https://www.amazon.com.mx/wedding/registry/1TKPJTRUUW6UX" target="_blank" class="icon brands fa-amazon">
+              <span class="label">Amazon</span>
+            </a> 
+          </li> 
+          <li> 
+            <a href="https://sites.google.com/view/tarjetabbvabodaroxul/inicio" target="_blank" class="fa fa-credit-card" onclick="showAlert('4152 3137 1005 6008');return false;"></a> 
+          </li> 
+          <li> 
+            <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51468394" target="_blank" class="fa fa-gifts">
+              <span class="label">L</span>
+            </a> 
+          </li> 
+        </ul> 
+      </nav>  
+      
+      <!-- Main Content -->
+      <div id="main"> 
+        <!-- Featured Post -->
+        <article class="post featured"> 
+          <header class="major"> 
+            <span class="date" style="display: none;"> 2024-09-15 </span> 
+            <h2> 
+              <a>Nuestra Boda</a> 
+            </h2> 
+            <p>
+              "Sabiendo que el amor es para compartir <br> 
+              cada uno pensando que el amor jamás morirá <br> 
+              mirando sus ojos y esperando que siempre este ahí". <br> 
+              Here, There & Everywhere
+            </p>
+          </header> 
+          <a href="/blog/massive-headline" class="image-grid"> 
+            <img src="../../public/images/gif-1.gif" alt="Vertical Image 1" class="vertical"> 
+            <img src="../../public/images/1.png" alt="Horizontal Image 1" class="horizontal"> 
+            <img src="../../public/images/2.png" alt="Horizontal Image 2" class="horizontal"> 
+            <img src="../../public/images/gif-2.gif" alt="Vertical Image 2" class="vertical"> 
+          </a>  
+          
+          <br> 
+          <section> 
+            <h3> CON LA BENDICIÓN DE NUESTRA MADRE Y PADRE </h3> 
+          </section> 
+          <section> 
+            <h3>
+              Rosa María Chavez Vargas <br> 
+              Cesar Armando De La O Gavaldón <br> 
+              & <br> 
+              Minerva Alicia Guerra Caraveo 
+            </h3> 
+          </section> 
+          
+          <ul class="actions special"> 
+            <li> 
+              <a href="/Itinerario" class="button large" target="_blank">Itinerario y Padrinos</a> 
+            </li> 
+          </ul> 
+        </article> 
+        
+        <!-- Posts -->
+        <section class="posts"> 
+          <section class="post"> 
+            <header class="major"> 
+              <h1>CEREMONIA RELIGIOSA</h1> 
+              <p>
+                Parroquia Espíritu Santo <br> 
+                Calle Miguel Schultz No. 3104 <br> 
+                La Cima Chihuahua, Chih <br> 
+                <strong> Domingo 15 de Septiembre del 2024 </strong> <br> 
+                <em> 18:00 hrs </em>
+              </p> 
+              <ul class="actions special"> 
+                <li> 
+                  <a href="https://maps.app.goo.gl/AKNeX6mi5Awwm7vFA" class="button" target="_blank">Ver Mapa</a> 
+                </li> 
+              </ul> 
+            </header> 
+          </section>
+          
+          <section class="post"> 
+            <header class="major"> 
+              <h1>RECEPCIÓN</h1> 
+              <p>
+                Los Encinos Salón <br> 
+                Calle 38 y Av. Palestina No. 12900 <br> 
+                Tabalaopa, Chihuahua, Chih. <br> 
+                <strong> Domingo 15 de Septiembre del 2024 </strong> <br> 
+                <em> 21:00 hrs </em>
+              </p> 
+              <ul class="actions special"> 
+                <li> 
+                  <a href="https://maps.app.goo.gl/iHpp8D22sacXa4xd9" class="button" target="_blank">Ver Mapa</a> 
+                </li> 
+              </ul> 
+            </header> 
+          </section> 
+        </section> 
+      </div> 
+      
+      <!-- Footer -->
+      <footer id="footer"> 
+        <section> 
+          <section> 
+            <h1>CONFIRMA TU ASISTENCIA</h1> 
+          </section> 
+          
+          <form id="asistencia-form"> 
+            <div class="fields"> 
+              <div class="field"> 
+                <h3 for="Nombre">Nombre</h3> 
+                <input type="text" name="Nombre" id="Nombre" required> 
+              </div> 
+              
+              <div class="field"> 
+                <h3 for="Asistencia">Asistencia</h3> 
+                <div id="attendance-options"> 
+                  <div class="attendance-option"> 
+                    <input type="radio" id="si-asistire" name="attendance" value="si" required> 
+                    <label for="si-asistire">Si Asistiré</label> 
+                  </div> 
+                  <div class="attendance-option"> 
+                    <input type="radio" id="no-asistire" name="attendance" value="no" required> 
+                    <label for="no-asistire">No Asistiré</label> 
+                  </div> 
+                </div> 
+              </div> 
+              
+              <div class="field"> 
+                <h3 for="Mensaje">Mensaje</h3> 
+                <textarea name="Mensaje" id="Mensaje" rows="3"></textarea> 
+              </div> 
+            </div> 
+            
+            <ul class="actions"> 
+              <h3><input type="submit" value="Enviar"></h3> 
+            </ul> 
+          </form> 
+          
+          <section> 
+            <h3>
+              TE AGRADECERÍAMOS SI PUDIERAS CONFIRMAR TU ASISTENCIA, <br> 
+              AL LLENAR TU INFORMACIÓN ME ENVIARAS TU CONFIRMACIÓN <br> 
+              <strong><u>TEN EN CUENTA QUE ES UN EVENTO SIN INFANTES</u></strong>
+            </h3> 
+          </section> 
+        </section> 
+        
+        <!-- Mesa de Regalos Section -->
+        <section class="split contact mesa-de-regalos"> 
+          <section class="mesa-de-regalos-content"> 
+            <div class="left-column"> 
+              <h1>MESA DE REGALOS</h1> 
+              <p>
+                Nos emociona que nos puedas acompañar a nuestro gran día, ya que es muy importante para nosotros, y si deseas otorgarnos un obsequio, estas son las opciones que les sugerimos, gracias. :)
+              </p> 
+            </div> 
+            
+            <div class="right-column"> 
+              <p><strong>Haz click en el logo</strong></p> 
+              <ul class="icons-list"> 
+                <li> 
+                  <a href="https://sites.google.com/view/tarjetabbvabodaroxul/inicio" target="_blank"> 
+                    <img src="../../public/images/VerdeBBVA.png" alt="Tarjeta BBVA"> 
+                  </a> 
+                </li> 
+                <li> 
+                  <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51468394" target="_blank"> 
+                    <img src="../../public/images/Verdeliverpool.png" alt="Liverpool"> 
+                  </a> 
+                </li> 
+                <li> 
+                  <a href="https://www.amazon.com.mx/wedding/registry/1TKPJTRUUW6UX" target="_blank"> 
+                    <img src="../../public/images/Verde Amazon.png" alt="Amazon"> 
+                  </a> 
+                </li> 
+              </ul> 
+            </div> 
+          </section> 
+        </section> 
+        
+        <!-- Sección de Instagram -->
+        <section class="instagram-section" style="background-image: url('${backgroundImage}'); width: 40%; margin-top: 20px;"> 
+          <div class="overlay"> 
+            <p class="caption"></p> 
+            <h2 class="hashtag"></h2> 
+          </div> 
+        </section> 
+        
+      </footer> 
+      
+      <!-- Instagram Section -->
+      <section class="instagram-section" style="background-image: url('../../public/images/Barda.png');"> 
+        <div class="overlay"> 
+          <p class="caption">
+            Comparte con nosotros todas tus fotografías del evento, usando el siguiente #hashtag en todas tus publicaciones de Instagram.
+          </p> 
+          <h2 class="hashtag">#Bodaroxul</h2> 
+        </div> 
+      </section> 
+      
+      <div id="copyright"></div> 
+    </div> 
+  </main> 
+</body>
+</html>

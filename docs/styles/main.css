@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "fontawesome-all.min.css";
 /*
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
@@ -72,12 +71,6 @@ input, select, textarea {
 }
 
 /* Basic */
-@-ms-viewport {
-  width: device-width;
-}
-body {
-  -ms-overflow-style: scrollbar;
-}
 
 @media screen and (max-width: 480px) {
   html, body {

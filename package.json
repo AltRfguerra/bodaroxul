@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build:css": "sass src/styles/sass/main.scss docs/styles/main.css",
-    "build:js": "babel src/scripts --out-dir docs/scripts",
-    "build": "npm run build:css && npm run build:js && astro build",
+    "build": "npm run clean && npm run build:css && npm run build:js && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "clean": "rm -rf dist docs",
+    "build:css": "sass src/styles/sass/main.scss docs/styles/main.css",
+    "build:js": "babel src/scripts --out-dir docs/scripts"
   },
   "dependencies": {
     "@astrojs/mdx": "^1.0.3",
@@ -29,12 +30,8 @@
     "prettier-plugin-astro": "^0.12.0",
     "rollup": ">=3",
     "sass": "^1.67.0",
-    "@babel/cli": "^7.20.0",
-    "@babel/core": "^7.20.0",
-    "@babel/preset-env": "^7.20.0"
-  },
-  "babel": {
-    "presets": ["@babel/preset-env"]
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }
 

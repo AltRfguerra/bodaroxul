@@ -2,7 +2,7 @@
   "name": "astro-massiely",
   "version": "1.0.0",
   "private": false,
-  "homepage": "/bodaroxul/docs",
+  "homepage": "https://altrfguerra.github.io/bodaroxul/docs/",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

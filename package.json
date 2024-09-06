@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run clean && npm run build:css && npm run build:js && astro build",
+    "build": "npm run clean && npm run build:css && npm run build:js && astro build && npm run create-nojekyll",
     "preview": "astro preview",
     "astro": "astro",
     "clean": "rm -rf dist docs",
     "build:css": "sass src/styles/sass/main.scss docs/styles/main.css",
-    "build:js": "babel src/scripts --out-dir docs/scripts"
+    "build:js": "babel src/scripts --out-dir docs/scripts",
+    "create-nojekyll": "echo > docs/.nojekyll"
   },
   "dependencies": {
     "@astrojs/mdx": "^1.0.3",

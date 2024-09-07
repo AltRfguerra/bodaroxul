@@ -3021,11 +3021,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 /* Media Query for mobile (portrait mode) */
 @media (max-width: 768px) and (orientation: portrait) {
   #countdown-container {
-    padding: 10px;
+    padding: 5px;
   }
 
   .countdown-container h1 {
-    font-size: 1.2em; /* Reduce font size for smaller screens */
+    font-size: 1em; /* Reduce font size for smaller screens */
   }
 
   #days, #hours, #minutes, #seconds {

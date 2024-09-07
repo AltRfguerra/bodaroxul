@@ -2712,7 +2712,17 @@ body.is-preload #wrapper.fade-in:before {
     background-size: auto, auto, auto 175%;
   }
 }
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .mobile-icon {
+    display: block;
+  }
+}
 
+@media only screen and (orientation: landscape) {
+  .mobile-icon {
+    display: none;
+  }
+}
 /* Intro */
 #intro {
   color: #ffffff;

@@ -2986,7 +2986,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Ajuste para que se adapte a pantallas pequeñas */
+  flex-wrap: nowrap; /* Evita que los elementos se apilen en pantallas pequeñas */
 }
 
 .time {
@@ -3033,7 +3033,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   }
 
   .time {
-    margin: 5px 0; /* Adjust margins for better spacing on small screens */
+    margin: 0 5px; /* Reduce margin for better spacing */
     padding: 5px;
   }
 
@@ -3046,7 +3046,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   }
 
   .countdown {
-    flex-direction: column; /* Stack items vertically on small screens */
+    flex-wrap: nowrap; /* Keep items in a row */
+    justify-content: space-between; /* Ensure horizontal alignment */
   }
 }
 

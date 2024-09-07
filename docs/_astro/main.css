@@ -2986,11 +2986,13 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* Ajuste para que se adapte a pantallas pequeñas */
 }
 
 .time {
   margin: 0 10px;
-  text-align: center border-radius 10px;
+  text-align: center;
+  border-radius: 10px;
   padding: 10px;
 }
 
@@ -3015,6 +3017,39 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   font-size: 2.5em;
   color: white;
 }
+
+/* Media Query for mobile (portrait mode) */
+@media (max-width: 768px) and (orientation: portrait) {
+  #countdown-container {
+    padding: 10px;
+  }
+
+  .countdown-container h1 {
+    font-size: 1.5em; /* Reduce font size for smaller screens */
+  }
+
+  #days, #hours, #minutes, #seconds {
+    font-size: 2em; /* Adjust font size for smaller screens */
+  }
+
+  .time {
+    margin: 5px 0; /* Adjust margins for better spacing on small screens */
+    padding: 5px;
+  }
+
+  .label {
+    font-size: 0.7em; /* Reduce label size */
+  }
+
+  .separator {
+    font-size: 2em; /* Adjust separator size */
+  }
+
+  .countdown {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+}
+
 
 /* Header */
 #header {

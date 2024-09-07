@@ -4035,11 +4035,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   padding: 10px;
   text-align: center;
   color: black;
-  text-shadow: 
-      1px 1px 0px white, /* Sombra inferior derecha */
-      -1px -1px 0px white, /* Sombra superior izquierda */
-      -1px 1px 0px white, /* Sombra inferior izquierda */
-      1px -1px 0px white; /* Sombra superior derecha */
+  -webkit-text-stroke: 1px white; /* Agrega un borde blanco alrededor del texto */
 }
 #Instagram .caption {
   font-size: 1.2rem;
@@ -4050,11 +4046,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   font-size: 2.5rem;
   font-family: "Great Vibes", cursive;
   color: black;
-  text-shadow: 
-      1px 1px 0px white, /* Sombra inferior derecha */
-      -1px -1px 0px white, /* Sombra superior izquierda */
-      -1px 1px 0px white, /* Sombra inferior izquierda */
-      1px -1px 0px white; /* Sombra superior derecha */
+  -webkit-text-stroke: 1px white; /* Agrega un borde blanco alrededor del texto */
 }
 
 /*# sourceMappingURL=main.css.map */

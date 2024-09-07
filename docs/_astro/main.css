@@ -3025,24 +3025,24 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   }
 
   .countdown-container h1 {
-    font-size: 1.5em; /* Reduce font size for smaller screens */
+    font-size: 1.2em; /* Reduce font size for smaller screens */
   }
 
   #days, #hours, #minutes, #seconds {
-    font-size: 2em; /* Adjust font size for smaller screens */
+    font-size: 1em; /* Adjust font size for smaller screens */
   }
 
   .time {
-    margin: 0 5px; /* Reduce margin for better spacing */
-    padding: 5px;
+    margin: 0 4px; /* Reduce margin for better spacing */
+    padding: 4px;
   }
 
   .label {
-    font-size: 0.7em; /* Reduce label size */
+    font-size: 0.5em; /* Reduce label size */
   }
 
   .separator {
-    font-size: 2em; /* Adjust separator size */
+    font-size: 1em; /* Adjust separator size */
   }
 
   .countdown {

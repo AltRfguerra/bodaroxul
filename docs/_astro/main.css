@@ -4035,6 +4035,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   padding: 10px;
   text-align: center;
   color: black;
+  border-color: white;
 }
 #Instagram .caption {
   font-size: 1.2rem;
@@ -4045,6 +4046,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   font-size: 2.5rem;
   font-family: "Great Vibes", cursive;
   color: black;
+  border-color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

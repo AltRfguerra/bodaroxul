@@ -109,23 +109,23 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 /* Type */
 @font-face {
   font-family: "BonVivant";
-  src: url(./../../../../public/webfonts/Bon_Vivant_Font/Bon_Vivant_Font/Bon\ Vivant\ Serif\ Bold.otf);
+  src: url(../webfonts/Bon_Vivant_Font/Bon_Vivant_Font/Bold.otf);
 }
 @font-face {
   font-family: "Cormorant";
-  src: url(./../../../../public/webfonts/Cormorant/Cormorant-VariableFont_wght.ttf);
+  src: url(../webfonts/Cormorant/Cormorant-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: "b";
-  src: url(./../../../../public/webfonts/briquete/Briquete.otf);
+  src: url(../webfonts/briquete/Briquete.otf);
 }
 @font-face {
   font-family: "Raleway";
-  src: url(./../../../../public/webfonts/Raleway/Raleway-Medium.ttf);
+  src: url(../webfonts/Raleway/Raleway-Medium.ttf);
 }
 @font-face {
   font-family: "Numbers";
-  src: url(./../../../../public/webfonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+  src: url(../webfonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
 }
 html {
   font-size: 16pt;
@@ -2671,7 +2671,7 @@ table.alt tbody tr td {
   width: 90%;
   height: 100%;
   background-color: #E5E4E0;
-  background-image: url("./images/Portada.png"), url("./images/bg.jpg");
+  background-image: url("../images/Portada.png");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -2742,7 +2742,7 @@ body.is-preload #wrapper.fade-in:before {
   text-align: center;
   z-index: 0.5;
   min-height: 100vh;
-  background-image: url(./../../../../public/images/Portada.png);
+  background-image: url(../images/Portada.png);
   background-repeat: no-repeat;
   background-position: center top;
   height: 1000px;
@@ -2751,15 +2751,15 @@ body.is-preload #wrapper.fade-in:before {
 }
 @font-face {
   font-family: "The Queen";
-  src: url(./../../../../public/webfonts/the_queen/TheQueen-Regular.ttf);
+  src: url(../webfonts/the_queen/TheQueen-Regular.ttf);
 }
 @font-face {
   font-family: "Bourton";
-  src: url(./../../../../public/webfonts/Bourton-Font/Bourton/BourtonBase.ttf);
+  src: url(../webfonts/Bourton-Font/Bourton/BourtonBase.ttf);
 }
 @font-face {
   font-family: "Juliette";
-  src: url(./../../../../public/webfonts/julietta_messie/Julietta-Messie.otf);
+  src: url(../webfonts/julietta_messie/Julietta-Messie.otf);
 }
 #intro input,
 #intro select,
@@ -2876,7 +2876,7 @@ body.is-preload #wrapper.fade-in:before {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: url("background-image.jpg") no-repeat center center fixed;
+  background: url("../images/Portada.png") no-repeat center center fixed;
   background-size: cover;
   font-family: "Arial", sans-serif;
 }
@@ -3199,7 +3199,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   padding-left: 0;
 }
 #nav ul.links li {
-  display: block;
+  display: flex;
   padding-left: 0;
 }
 #nav ul.links li a {
@@ -3207,7 +3207,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  display: block;
+  display: flex;
   font-size: 0.8rem;
   outline: none;
   padding: 0 2rem;
@@ -3256,7 +3256,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 /* Main */
 @font-face {
   font-family: "Julieta";
-  src: url(./../../../../public/webfonts/the_queen/TheQueen-Regular.ttf);
+  src: url(../webfonts/the_queen/TheQueen-Regular.ttf);
 }
 #main {
   background-color: #BFBBB3;

@@ -3755,7 +3755,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   padding-left: 0;
 }
 #copyright ul li {
-  border-left: solid 2px;
   display: inline-block;
   line-height: 1;
   margin-left: 1rem;
@@ -3774,7 +3773,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 @media screen and (max-width: 480px) {
   #copyright ul li {
-    border-left: 0;
     margin: 1rem 0 0 0;
     padding-left: 0;
     display: block;
@@ -3799,7 +3797,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 .instagram-section .overlay {
   padding: 20px;
   text-align: center;
-  color: #fff;
+  color: black;
 }
 .instagram-section .caption {
   font-size: 1.2rem;
@@ -3809,7 +3807,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 .instagram-section .hashtag {
   font-size: 2.5rem;
   font-family: "Great Vibes", cursive;
-  color: #fff;
+  color: black;
 }
 
 #footer img {
@@ -4037,7 +4035,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   text-align: center;
-  color: #fff;
+  color: black;
 }
 #Instagram .caption {
   font-size: 1.2rem;
@@ -4047,7 +4045,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 #Instagram .hashtag {
   font-size: 2.5rem;
   font-family: "Great Vibes", cursive;
-  color: #fff;
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

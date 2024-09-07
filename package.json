@@ -28,13 +28,10 @@
     "uuid": "^10.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^0.0.0",
     "prettier-plugin-astro": "^0.12.0",
     "rollup": ">=3",
-    "sass": "^1.67.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "sass": "^1.67.0"
   }
 }
-
-
-
